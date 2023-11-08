@@ -21,4 +21,3 @@ if __name__ == '__main__':
             print("FAIL")
     else:
         print('FAIL! Result code != 0')
-

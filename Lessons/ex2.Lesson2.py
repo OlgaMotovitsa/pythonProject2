@@ -10,8 +10,8 @@ def checkout(cmd, text):
 
 
 def test_step1():
-        # test1
-        assert checkout("cat /etc/os-release", "22.04.1 LTS (Jammy Jellyfish)"), "FAIL"
+    # test1
+    assert checkout("cat /etc/os-release", "22.04.1 LTS (Jammy Jellyfish)"), "FAIL"
 
 
 

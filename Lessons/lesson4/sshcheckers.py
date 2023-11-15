@@ -1,5 +1,6 @@
 import paramiko
 
+
 def ssh_checkout(host, user, passwd, cmd, text, port=22):
     client = paramiko.SSHClient()
     client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
@@ -13,6 +14,7 @@ def ssh_checkout(host, user, passwd, cmd, text, port=22):
     else:
         return False
 
+
 def ssh_getout(host, user, passwd, cmd, port=22):
     client = paramiko.SSHClient()
     client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
@@ -21,6 +23,7 @@ def ssh_getout(host, user, passwd, cmd, port=22):
     out = (stdout.read() + stderr.read()).decode("utf-8")
     client.close()
     return out
+
 
 def upload_files(host, user, passwd, local_path, remote_path, port=22):
     print(f"Загружаем файл {local_path} в каталог {remote_path}")
@@ -32,6 +35,7 @@ def upload_files(host, user, passwd, local_path, remote_path, port=22):
         sftp.close()
     if transport:
         transport.close()
+
 
 def download_files(host, user, passwd, remote_path, local_path, port=22):
     print(f"Скачиваем файл {remote_path} в каталог {local_path}")
@@ -57,3 +61,4 @@ def ssh_checkout_negative(host, user, passwd, cmd, text, port=22):
         return True
     else:
         return False
+

@@ -8,7 +8,6 @@ def checkout(cmd, text):
     else:
         return False
 
-
 def test_step1():
     # test1
     assert checkout("cat /etc/os-release", "22.04.1 LTS (Jammy Jellyfish)"), "FAIL"

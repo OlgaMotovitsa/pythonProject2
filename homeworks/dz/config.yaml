@@ -3,5 +3,5 @@ folder_out: /home/zerg/out
 folder_ext: /home/zerg/folder1
 folder_ext2: /home/zerg/folder2
 count: 3
-bs: 1M
+bs: 0M
 type: zip

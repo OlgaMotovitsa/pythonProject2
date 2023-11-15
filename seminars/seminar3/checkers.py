@@ -14,5 +14,3 @@ def checkout_negative(cmd, text):
     else:
         return False
 
-def getout(cmd):
-    return subprocess.run(cmd, shell=True, stdout=subprocess.PIPE, encoding='utf-8').stdout
